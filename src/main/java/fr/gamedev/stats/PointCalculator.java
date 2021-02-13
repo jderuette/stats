@@ -1,5 +1,6 @@
 package fr.gamedev.stats;
 
+import java.security.InvalidParameterException;
 import java.util.Set;
 import java.util.SortedSet;
 
@@ -32,9 +33,31 @@ public class PointCalculator {
 
     private int fsc(int dataSource, boolean isFirstTime, short basePoints, short firstTimeBonus, RoundingMode roundMode,
             Operator operator, SortedSet<FscSlice> slices) {
-        int result = 0;
+        float calcResult = 0;
+        int result;
+        FscSlice slice = getValidSlice(slices, dataSource);
 
-        //TODO à implementer
+        if (null == slice) {
+            throw new InvalidParameterException("No valid slice found for value " + dataSource + ", in : " + slices);
+        }
+
+        if (isFirstTime) {
+            calcResult = firstTimeBonus;
+        }
+
+        calcResult += operator.apply(basePoints, slice.getWeight());
+
+        switch (roundMode) {
+        case UP:
+            result = (int) Math.ceil(calcResult);
+            break;
+        case DOWN:
+            result = Math.round(calcResult);
+            break;
+        default:
+            throw new InvalidParameterException("Round mode '" + roundMode + "' unknow !");
+
+        }
 
         return result;
     }
