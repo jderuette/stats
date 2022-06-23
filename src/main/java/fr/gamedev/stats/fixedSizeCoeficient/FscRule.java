@@ -46,6 +46,12 @@ public class FscRule {
         this.slices = allSlices;
     }
 
+    /**
+     * Rules syntax : [rule_name] rule_code[rules_params]
+     * with rules_params : (first_time_bonnus)(round_strategy)(data_source-weight_operator)slice_1-weight_1|slice_2-weight_2|slice_3-weight_3|slice_x-weight_x|i-weight_last]
+     * @param fscRuleString
+     * @return
+     */
     public static FscRule fromString(String fscRuleString) {
         Matcher matcher = FSC_RULE_PATTERN.matcher(fscRuleString);
         boolean match = matcher.matches();

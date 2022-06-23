@@ -84,7 +84,7 @@ public class FscRuleTest {
 
     @Test(expected = InvalidRuleException.class)
     public void testFromStringInvalidMissingSlices() {
-        String fcsRuleDescription = "[linear no Slices] FSC[(500)(up)(accumulated_points-*)]";
+        String fcsRuleDescription = "[linear test] FSC[(500)(up)(accumulated_points-*)i-1]";
         FscRule rule = FscRule.fromString(fcsRuleDescription);
 
         assertNull("Rules is not valid, should throw an exception", rule);
