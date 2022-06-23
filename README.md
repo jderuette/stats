@@ -31,7 +31,7 @@ with rules_params :
 This strategy is bases on already accumulated point (in the category) by the user. For each slice of points, a earned point is weighted. With a possible bonus for the first time the user perform this action.
 Accumulated_points can be earned by other actions (in the same category).
 
-The strategy is [Fixed step coefficient plus firstTime bonus rounded up (accumulated points)] : FSC[(100)(up)(accumulated_points-*)500-2|1000-1.5|2000-1|5000-0.75|10000-0.5|50000-0.25|i-0.01]
+The strategy is [Fixed step coefficient plus firstTime bonus rounded up (accumulated points)]FSC[(100)(up)(accumulated_points-*)500-2|1000-1.5|2000-1|5000-0.75|10000-0.5|50000-0.25|i-0.01]
 - First time +100pt
 - from 0 to 500 ==> *2
 - from 501 to 1 000 ==> *1.5
