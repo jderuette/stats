@@ -32,11 +32,24 @@ public class PointCalculator {
 
     private int fsc(int dataSource, boolean isFirstTime, short basePoints, short firstTimeBonus, RoundingMode roundMode,
             Operator operator, SortedSet<FscSlice> slices) {
-        int result = 0;
 
-        //TODO à implementer
+        FscSlice sliceFound = getValidSlice(slices, dataSource);
+        
+        float result = basePoints * sliceFound.getWeight();
+        
+        if(isFirstTime) {
+        	result += firstTimeBonus;
+        }
+        
+        int resultat = 0;
+        
+        if(roundMode.equals(RoundingMode.UP)) {
+        	resultat = (int)Math.ceil(result);
+        } else if(roundMode.equals(RoundingMode.DOWN)) {
+        	resultat = (int)Math.floor(result);
+        }
 
-        return result;
+        return resultat;
     }
 
     private FscSlice getValidSlice(Set<FscSlice> slices, int value) {
