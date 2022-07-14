@@ -1,0 +1,196 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "af12678a-03b4-4bff-8c83-e62a2736e838",
+			"uid": "0-af12678a-03b4-4bff-8c83-e62a2736e838",
+			"name": "FSC",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"9c3e862f-22cc-4124-9565-8b578a7999dd",
+				"b43bed25-0a26-4ac4-abb3-f3dee611673a",
+				"2363fd21-b493-47c2-a455-321a03627537"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-06-23T13:01:23.816Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "2363fd21-b493-47c2-a455-321a03627537",
+					"uid": "0-2363fd21-b493-47c2-a455-321a03627537",
+					"name": "Calcul fsc 2",
+					"url": "http://{{url}}:{{port}}/stats/fsc?currentPoint=700&firstTime=true&ruleName={{ruleName2}}",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "currentPoint",
+							"value": "700",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "firstTime",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "ruleName",
+							"value": "{{ruleName2}}",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "af12678a-03b4-4bff-8c83-e62a2736e838",
+					"pathVariables": {}
+				},
+				{
+					"id": "9c3e862f-22cc-4124-9565-8b578a7999dd",
+					"uid": "0-9c3e862f-22cc-4124-9565-8b578a7999dd",
+					"name": "Calcul fsc 1",
+					"url": "http://{{url}}:{{port}}/stats/fsc?currentPoint=700&firstTime=false&ruleName={{ruleName}}",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "currentPoint",
+							"value": "700",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "firstTime",
+							"value": "false",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						},
+						{
+							"key": "ruleName",
+							"value": "{{ruleName}}",
+							"equals": true,
+							"description": null,
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "af12678a-03b4-4bff-8c83-e62a2736e838",
+					"pathVariables": {}
+				},
+				{
+					"id": "b43bed25-0a26-4ac4-abb3-f3dee611673a",
+					"uid": "0-b43bed25-0a26-4ac4-abb3-f3dee611673a",
+					"name": "Calcul fsc 2 fistTime",
+					"url": "http://{{url}}:{{port}}/stats/fsc?currentPoint=700&firstTime=true&ruleName={{ruleName}}",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [
+						{
+							"key": "currentPoint",
+							"value": "700",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "firstTime",
+							"value": "true",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						},
+						{
+							"key": "ruleName",
+							"value": "{{ruleName}}",
+							"equals": true,
+							"description": "",
+							"enabled": true
+						}
+					],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "af12678a-03b4-4bff-8c83-e62a2736e838",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "dfc2fa00-1679-4a57-9195-f1622046076e",
+			"name": "FSC",
+			"values": [
+				{
+					"key": "url",
+					"value": "localhost",
+					"type": "default",
+					"enabled": true
+				},
+				{
+					"key": "port",
+					"value": "8080",
+					"type": "default",
+					"enabled": true
+				},
+				{
+					"key": "ruleName",
+					"value": "r10",
+					"type": "default",
+					"enabled": true
+				},
+				{
+					"key": "ruleName2",
+					"value": "r1",
+					"type": "default",
+					"enabled": true
+				}
+			]
+		},
+		{
+			"id": "8122690b-0bb5-445d-aa38-608c3d242fc6",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}

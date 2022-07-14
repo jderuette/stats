@@ -35,7 +35,7 @@ public class PointCalculator {
 
         FscSlice sliceFound = getValidSlice(slices, dataSource);
         
-        float result = basePoints * sliceFound.getWeight();
+        double result = operator.apply(basePoints, sliceFound.getWeight());
         
         if(isFirstTime) {
         	result += firstTimeBonus;
